@@ -22,6 +22,8 @@
 \author{Craig Sanders}
 \date{ }
 
+\setlength{\parindent}{0pt}
+
 
 \begin{document}
 
@@ -43,12 +45,50 @@
 
 \section{Introducting mathematical functions.}
 
-\subsection{Numbers and number lines.}
+\subsection{Numbers and their evolution.}
 
-Think of all the individual numbers which we might possibly use throughout the course of our everyday lives, $0$, $1$, $2$, 
-$3$, $10$, $-100$, $3.141$, $0.000001$, $3817/245$ and so on. All of these numbers are called real numbers and
-are denoted by the symbol $\mathbb{R}$.
-We can think of every real number as residing on an infinitely long straight line which stretches from
+\noindent
+\\
+\textbullet \; The Natural numbers -- $\mathbb{N}$\\
+
+A long time ago, humans counted using only the numbers $1$, $2$, $3$, and so on -- what we refer to nowadays
+as the positive integers. The set of all these numbers is known as the Natural numbers, and is denoted by the
+blackboard character $\mathbb{N}$.\\
+
+\textbullet \; The Integer numbers -- $\mathbb{Z}$\\
+
+Then gradually, over the course of time, first the concept of $0$ and then the negative integers, made their way
+into the number system. The set of all these numbers -- when taken in conjunction with all of the numbers in 
+$\mathbb{N}$, results in a new or expanded set of numbers called the Integers, and which is denoted by the
+character $\mathbb{Z}$.\\
+
+\textbullet \; The Rational numbers -- $\mathbb{Q}$\\
+
+Then people started to do things like divide $1$ by $2$ to yield quotients, i.e. $1/2$. Numbers like this didn't
+fit into the set represented by $\mathbb{Q}$, so $\mathbb{Q}$ was expanded even further to include numbers that
+could be expressed as quotients or ratios. This set is denoted by the blackboard character $\mathbb{Q}$.\\
+
+\textbullet \; The Real numbers -- $\mathbb{R}$\\
+
+But then what about numbers like $\pi$, $e$, and so on -- numbers which are referred to an Irrational numbers,
+because they can't be expressed as a ratio of two numbers.which can't be represented as quotients or fractions? In
+order to accommodate numbers like these, $\mathbb{Q}$ was expanded again to include them. This set is denoted by
+the blackboard character $\mathbb{R}$.\\
+
+If you think of all the individual numbers which we might possibly use throughout the course of our everyday lives, $0$, $1$, $2$, 
+$3$, $10$, $-100$, $\pi$, $0.000001$, $3817/245$ and so on; all of these numbers are encompassed by the set of 
+Real numbers.\\
+
+\textbullet \; The Complex numbers -- $\mathbb{C}$\\
+
+Consider the result of $\sqrt{-1}$. Which of the aforementioned sets of numbers does the result live in? The answer
+is that it doesn't live in any of them. Thus, to accommodate it, $\mathbb{R}$ was expanded once again, this time to
+yield the set of Complex numbers. This set is denoted by the blackboard character $\mathbb{C}$.\\
+
+
+\subsection{Numbers lines.}
+
+We can think of every real number. i.e. every number which belongs to the set of Real numbers, as residing on an infinitely long straight line which stretches from
 $-\infty$ to $+\infty$. We call this infinitely long straight line the real number line, and there is a place on this
 line for any and all real numbers that we can think of.
 
@@ -58,22 +98,67 @@ line for any and all real numbers that we can think of.
 Consider the number $-1$ and what happens if we raise it to increasing integer powers.
 
 \begin{align*}
-(-1)^{0} &= 1  \\
-(-1)^{1} &= -1 \\
-(-1)^{2} &= 1  \\
-(-1)^{3} &= -1 \\
-(-1)^{4} &= 1  \\
-(-1)^{5} &= -1
+(-1)^{0} &= 1  \;\;\; & \;\;\; (-1)^{1} &= -1 \\
+(-1)^{2} &= 1  \;\;\; & \;\;\; (-1)^{3} &= -1 \\
+(-1)^{4} &= 1  \;\;\; & \;\;\; (-1)^{5} &= -1
 \end{align*}
+
+\noindent
+\\
+\textbullet \; Integer valued function\\
 
 Note how the resulting values alternate between $-1$ and $1$. If we were to represent these values as a function,
 then it might look like the following;
 
 \begin{equation}
+\label{eqn:Square_wave}
 f(x) = (-1)^{x} \;\; \vert \;\; x \in \mathbb{N} 
+\end{equation} 
+
+where the section that appears after the function definition, i.e.
+
+\begin{equation*}
+\vert \;\; x \in \mathbb{N}
+\end{equation*}
+
+can be thought of as a caveat which is to be applied to the function. This caveat is written in mathematical
+nomenclature and can be interpreted as meaning ``such that (or where)  $x$ can only take on any integer number
+value, i.e. any value from the set of integer numbers''.\\
+
+Seeing as this caveat is applied to the function, the function will therefore only be defined when $x$ is equal
+to an integer value. Graphing this function will result in a plot which looks as follows;
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.75]{images/Square_wave_dots.png}
+  \caption{This figure depicts the function $f(x) = (-1)^{x} \;\; \vert \;\; x \in \mathbb{N}$}
+  \label{fig:Square_wave_dots}
+\end{figure}
+
+
+\noindent
+\\
+\textbullet \; Real valued function\\
+
+If you don't like or don't feel comfortable with the integer number values caveat, then the function can be rewritten 
+as follows, so that it makes use of real number values;
+
+\begin{equation}
+\label{eqn:Square_wave}
+f(x) = (-1)^{\lfloor x\rfloor} \;\; \vert \;\; x \in \mathbb{R}
 \end{equation}
 
-where \(x \in \mathbb{N}\) is simply mathematical speak for ``$x$ can only take on integer values''.
+where the $\lfloor\;\rfloor$ characters denote the mathematical floor function. Again, note that the function has a
+caveat associated with it. The caveat is very similar to the previous one, except in this case it means 
+``where  $x$ can only take any real number value''.\\
+
+Plotting equation \ref{eqn:Square_wave} on a 2-dimensioanl Argand diagram results in the plot which is shown
+in figure \ref{fig:Square_wave}.
+
+\begin{figure}[h!]
+  \includegraphics[scale=0.75]{images/Square_wave.png}
+  \caption{This figure depicts the function $f(x) = (-1)^{\lfloor x\rfloor}$}
+  \label{fig:Square_wave}
+\end{figure}
 
 
 \subsection{Imaginary numbers.}
